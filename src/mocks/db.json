@@ -1,0 +1,84 @@
+{
+  "tags": [
+    {
+      "id": "1",
+      "name": "FRONT-END",
+      "color": "#6BD1FF"
+    },
+    {
+      "id": "2",
+      "name": "BACK-END",
+      "color": "#00C86F"
+    },
+    {
+      "id": "3",
+      "name": "MOBILE",
+      "color": "#FFBA05"
+    }
+  ],
+  "videos": [
+    {
+      "id": "1",
+      "title": "O que faz uma desenvolvedora front-end?",
+      "url": "https://www.youtube.com/embed/ZY3-MFxVdEw?si=zVhFiDpUCDM__hmY&amp;controls=0",
+      "description": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!",
+      "tagId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Guia de carreira Front-end | #HipstersPontoTube",
+      "url": "https://www.youtube.com/embed/fpth65ts3cw?si=qaKlPgFrOZVD2a9w&amp;controls=0",
+      "description": "Nesse primeiro episódio, confira o que é front-end e como seguir nessa área da tecnologia, através do Tech Guide front-end, um Guia de Estudos do iniciante ao avançado. São 3 níveis de Profundidade e 1 nível de Expansão, formando seu perfil como Dev Front-End em T.",
+      "tagId": "1"
+    },
+    {
+      "id": "3",
+      "title": "Métricas para o Front End com Mario Souto | #HipstersPontoTube",
+      "url": "https://www.youtube.com/embed/iVNR-6v8lZU?si=zfDrAvo4Uvu7So3I&amp;controls=0",
+      "description": "Neste vídeo o Paulo Silveira e o ‪@DevSoutinho‬ batem um papo sobre as métricas que não podem ser esquecidas em um bom site. Se você tá começando a programar ou ainda não sabe quais métricas utilizar no dia a dia, confira o conteúdo e anota as dicas pra colocar em prática. E se você já tem utilizado no seu site métricas incríveis que impactam diretamente na performance, conta pra gente nos comentários, queremos saber 😉✌",
+      "tagId": "1"
+    },
+    {
+      "id": "4",
+      "title": "Como testar seu Front-end? com Mario Souto | #HipstersPontoTube",
+      "url": "https://www.youtube.com/embed/CaTbfdsVydE?si=1kl5KJi9eE-uuuqX&amp;controls=0",
+      "description": "Por onde começar a testar as habilidades em Front-end? Se você tem dúvidas na hora de testar softwares e colocar em prática técnicas modernas, esse vídeo vai te ajudar.",
+      "tagId": "1"
+    },
+    {
+      "id": "5",
+      "title": "O que faz uma desenvolvedora Back-end? com Juliana Amoasei | #HipstersPontoTube",
+      "url": "https://www.youtube.com/embed/fiPfvylj6rk?si=wTla8DOdp3bq2Nvc&amp;controls=0",
+      "description": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?",
+      "tagId": "2"
+    },
+    {
+      "id": "6",
+      "title": "JavaScript para back-end | Hipsters.Talks",
+      "url": "https://www.youtube.com/embed/uyRDbGZG92E?si=t3zKYCaIgRPYVzJh&amp;controls=0",
+      "description": "Nesse episódio do Hipsters.Talks vamos conversar sobre a utilização de JavaScript para back-end e conhecer mais sobre sua aplicação no dia a dia de desenvolvimento.",
+      "tagId": "2"
+    },
+    {
+      "id": "7",
+      "title": "Desmistificando Mobile- Por onde eu começo? #01",
+      "url": "https://www.youtube.com/embed/2z6f8VN_Pro?si=PFqaF_XuZ0B3cUr4&amp;controls=0",
+      "description": "A Websérie “Desmistificando o mobile” vêm aí para simplificar com exemplos práticos vários assuntos envolvendo o mundo dos aplicativos de celular e neste primeiro episódio vamos partir, literalmente, do começo, por onde começar a estudar sobre o mundo dos apps? Os instrutores da escola de mobile da Alura nos ajudam com essa tarefa",
+      "tagId": "3"
+    },
+    {
+      "id": "8",
+      "title": "Desenvolvimento Android #HipstersPontoTube",
+      "url": "https://www.youtube.com/embed/fWscDFHKgw8?si=ZnJt9L2jolxVhDrF&amp;controls=0",
+      "description": "Um episódio focado no desenvolvimento de aplicações Android. Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais!",
+      "tagId": "3"
+    },
+    {
+      "id": "9",
+      "title": "Híbridos: Flutter e React Native | Desmistificando Mobile - Ep #4",
+      "url": "https://www.youtube.com/embed/vf9P_PycgRw?si=BGfyfo5ojiWaly1v&amp;controls=0",
+      "description": "Depois de entender sobre as linguagens de programação nativas, Helô vai conversar com a Natalia Thiel e o Caio Couto sobre Flutter e React Native, que são linguagens híbridas e que possibilitam outros caminhos para os aplicativos de celular 🤩",
+      "tagId": "3"
+    }
+  ]
+}
