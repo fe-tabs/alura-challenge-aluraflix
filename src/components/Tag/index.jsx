@@ -1,23 +1,10 @@
 import styled from "styled-components";
+import TagName from "./TagName";
 
-const TagContainer = styled.div`
-  margin-bottom: 9.2rem;
-`;
-
-const TagName = styled.div`
-  color: var(--gray-light);
-  height: 7rem;
-  width: 43.2rem;
-  font-size: 3.2rem;
-  font-weight: 900;
-  text-align: center;
-  margin-bottom: 2rem;
-  padding-top: 1.2rem;
-  border: .2rem solid #000;
-  border-radius: 1.6rem;
-`;
+const TagContainer = styled.div``;
 
 const TagVideos = styled.div`
+  margin: 2rem 0 6rem;
   padding-bottom: 2rem;
   display: flex;
   gap: 2rem;
@@ -50,8 +37,8 @@ export default function Tag({
 }) {
   return(
     <TagContainer>
-      <TagName style={{ backgroundColor: backgroundColor }}>
-        <h3>{name}</h3>
+      <TagName backgroundColor={backgroundColor}>
+        {name}
       </TagName>
 
       <TagVideos>
