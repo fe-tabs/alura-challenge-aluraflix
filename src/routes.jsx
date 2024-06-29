@@ -26,15 +26,20 @@ export default function AppRoutes() {
 
       {tags.map(tag => (
         <>
-          <Tag key={tag.id} backgroundColor={tag.color}>{tag.name}</Tag>
-          {videos.filter(video => video.tagId === tag.id).map(video => (
-            <Video
-              key={video.id}
-              title={video.title}
-              url={video.url}
-              color={tag.color}
-            />
-          ))}
+          <Tag 
+            key={tag.id} 
+            backgroundColor={tag.color}
+            name={tag.name}
+          >
+            {videos.filter(video => video.tagId === tag.id).map(video => (
+              <Video
+                key={video.id}
+                title={video.title}
+                url={video.url}
+                color={tag.color}
+              />
+            ))}
+          </Tag>
         </>
       ))}
 

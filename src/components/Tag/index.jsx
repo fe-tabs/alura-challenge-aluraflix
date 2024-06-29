@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 const TagContainer = styled.div`
+  margin-bottom: 9.2rem;
+`;
+
+const TagName = styled.div`
   color: var(--gray-light);
   height: 7rem;
   width: 43.2rem;
@@ -13,10 +17,46 @@ const TagContainer = styled.div`
   border-radius: 1.6rem;
 `;
 
-export default function Tag({ backgroundColor, children }) {
+const TagVideos = styled.div`
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  
+  &::-webkit-scrollbar {
+    background: rgba(34, 113, 209, .15);
+    border-radius: 1rem;
+  }
+  
+  &::-webkit-scrollbar-track {
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: #2271D1;
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #2271D1;
+  }
+`;
+
+export default function Tag({
+  backgroundColor,
+  name,
+  children
+}) {
   return(
-    <TagContainer style={{ backgroundColor: backgroundColor }}>
-      <h3>{children}</h3>
+    <TagContainer>
+      <TagName style={{ backgroundColor: backgroundColor }}>
+        <h3>{name}</h3>
+      </TagName>
+
+      <TagVideos>
+        {children}
+      </TagVideos>
     </TagContainer>
   );
 }
