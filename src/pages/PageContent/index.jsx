@@ -9,7 +9,9 @@ const BodyContainer = styled.div`
 `;
 
 const MainContainer = styled.main`
-  padding-bottom: 11rem;
+  @media (max-width: 768px){
+    padding-bottom: 11rem;
+  }
 `;
 
 export default function PageContent() {
