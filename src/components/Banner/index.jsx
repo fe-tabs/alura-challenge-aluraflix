@@ -23,11 +23,15 @@ const BannerContainer = styled.div`
     left: 0;
     z-index: -1;
   }
+
+  @media (max-width: 1024px) {
+    height: 56rem;
+  }
 `;
 
 const BannerVideoCard = styled.div`
-  position: relative;
-  top: 16rem;
+  position: absolute;
+  top: 14rem;
   padding: 2rem;
   display: flex;
   gap: 2.4rem;
@@ -38,6 +42,25 @@ const BannerVideoCard = styled.div`
     border: none;
     border-radius: .6rem;
     box-shadow: 0 0 .8rem .2rem ${props => props.$color};
+  }
+
+  @media (max-width: 1024px) {
+    top: 8rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    height: 100%;
+    top: 4rem;
+    padding: 0 4rem;
+    flex-direction: column;
+    justify-content: center;
+
+    iframe {
+      width: calc(100vw - 12rem);
+      flex: 35%;
+      order: 1;
+    }
   }
 `;
 
@@ -55,6 +78,39 @@ const BannerVideoDescription = styled.div`
   p {
     font-size: 2rem;
     font-weight: lighter;
+    text-overflow: ellipsis;
+  }
+
+  @media (max-width: 1024px) {
+    justify-content: start;
+
+    h4 {
+      font-size: 3.2rem;
+      margin-bottom: 1.2rem
+    }
+  }
+
+  @media (max-width: 768px) {
+    order: 2;
+
+    h4 {
+      max-height: 6.4rem;
+      font-size: 2.8rem;
+      overflow: hidden;
+    }
+
+    p {
+      max-height: 9.2rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    & > div {
+      height: 6rem;
+      max-width: 30rem;
+      font-size: 2.4rem;
+      order: 3;
+    }
   }
 `;
 

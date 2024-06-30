@@ -1,7 +1,19 @@
 import styled from "styled-components";
 import TagName from "./TagName";
 
-const TagContainer = styled.div``;
+const TagContainer = styled.div`
+  @media (max-width: 1024px) {
+    & > div {
+      margin: 0 auto 2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & > div {
+      margin: 0 0 2rem;
+    }
+  }
+`;
 
 const TagVideos = styled.div`
   margin: 2rem 0 6rem;

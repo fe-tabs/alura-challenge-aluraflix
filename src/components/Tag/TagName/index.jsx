@@ -4,7 +4,7 @@ const TagNameContainer = styled.div`
   background: ${props => props.$backgroundColor};
   color: var(--gray-light);
   height: 7rem;
-  width: 43.2rem;
+  max-width: 43.2rem;
   font-size: 3.2rem;
   font-weight: 900;
   text-align: center;

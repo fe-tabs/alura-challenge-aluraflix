@@ -12,7 +12,7 @@ const VideoPlayer = styled.div`
   iframe {
     height: 26rem;
     width: 43.2rem;
-    border: .4rem solid ${props => props.$color};
+    border: none;
     border-radius: .6rem .6rem 0 0;
     box-shadow: 0 0 .8rem .2rem ${props => props.$color};
   }
