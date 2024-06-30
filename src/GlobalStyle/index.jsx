@@ -29,12 +29,13 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: var(--gray-dark);
     color: var(--gray-light);
+    height: 100vh;
     font-family: var(--primary-font-family);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    margin: 0;
+    position: relative;
   }
-
+  
   a {
     text-decoration: none;
   }

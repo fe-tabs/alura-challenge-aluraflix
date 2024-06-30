@@ -32,7 +32,7 @@ const BannerContainer = styled.div`
 const BannerVideoCard = styled.div`
   position: absolute;
   top: 14rem;
-  padding: 2rem;
+  padding: 2rem 4rem;
   display: flex;
   gap: 2.4rem;
 
@@ -52,7 +52,6 @@ const BannerVideoCard = styled.div`
   @media (max-width: 768px) {
     height: 100%;
     top: 4rem;
-    padding: 0 4rem;
     flex-direction: column;
     justify-content: center;
 

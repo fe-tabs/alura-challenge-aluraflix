@@ -8,7 +8,15 @@ const FooterContainer = styled.footer`
   padding: 3.6rem;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    background-color: #0E0E0E;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 `;
 
 const FooterLogo = styled.img`
