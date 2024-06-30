@@ -12,7 +12,7 @@ const FooterContainer = styled.footer`
 
   @media (max-width: 768px) {
     background-color: #0E0E0E;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
