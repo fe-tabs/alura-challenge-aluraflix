@@ -34,8 +34,8 @@ export default function Header() {
       <HeaderLogo src={logo} alt="AluraFlix"/>
 
       <HeaderNav>
-        <HeaderLink isActive={true}>INÍCIO</HeaderLink>
-        <HeaderLink>NOVO VÍDEO</HeaderLink>
+        <HeaderLink url="/">INÍCIO</HeaderLink>
+        <HeaderLink url="/new">NOVO VÍDEO</HeaderLink>
       </HeaderNav>
     </HeaderContainer>
   );

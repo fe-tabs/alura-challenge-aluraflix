@@ -35,16 +35,17 @@ export default function Footer() {
 
       <FooterNav>
         <FooterLink
-          isActive={true}
           imageInactive="/icons/home.png"
           imageActive="/icons/home-active.png"
           imageClass="homeIcon"
+          url="/"
           text="ÍNICIO"
         />
 
         <FooterLink
           imageInactive="/icons/new.png"
           imageActive="/icons/new-active.png"
+          url="/new"
           text="NOVO VÍDEO"
         />
       </FooterNav>

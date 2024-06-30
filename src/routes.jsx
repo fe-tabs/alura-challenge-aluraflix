@@ -1,19 +1,21 @@
 import { GlobalStyle } from "./GlobalStyle";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NewVideo from "./pages/NewVideo";
+import PageContent from "./pages/PageContent";
   
 export default function AppRoutes() {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle/>
 
-      <Header/>
-
-      <Home/>
-
-      <Footer/>
-    </>
+      <Routes>
+        <Route path="/" element={<PageContent/>}>
+          <Route index element={<Home/>}/>
+          <Route path="/new" element={<NewVideo/>}/>
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

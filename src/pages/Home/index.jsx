@@ -4,8 +4,6 @@ import Video from "../../components/Video";
 import styled from "styled-components";
 import Banner from "../../components/Banner";
 
-const MainContainer = styled.main``;
-
 const HomeContainer = styled.section`
   padding: 2rem 4rem;
 `;
@@ -32,7 +30,7 @@ export default function Home() {
   }
 
   return(
-    <MainContainer>
+    <>
       {videos.length >= 1 && 
         <Banner tag={bannerTag} video={bannerVideo}/>
       }
@@ -55,6 +53,6 @@ export default function Home() {
           </Tag>
         ))}
       </HomeContainer>
-    </MainContainer>
+    </>
   );
 }
