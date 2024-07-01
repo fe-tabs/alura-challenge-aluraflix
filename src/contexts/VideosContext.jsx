@@ -36,10 +36,19 @@ export function useVideosContext() {
     fetch('http://localhost:3000/videos')
       .then(res => res.json())
       .then(data => setVideos(data));
-    }, []);
-    
+  }, []);
+
+  async function addVideo(video) {
+    await fetch('http://localhost:3000/videos', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(video)
+    });
+  }
+
   return {
     tags,
-    videos
+    videos,
+    addVideo
   }
 }

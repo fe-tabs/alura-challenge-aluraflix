@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useVideosContext } from "../../contexts/VideosContext";
+import { useState } from "react";
 
 const NewVideoContainer = styled.section`
   padding: 4rem 6rem;
@@ -36,8 +37,7 @@ const NewVideoForm = styled.form`
     font-weight: 500;
     flex: 100%;
   }
-
-  `;
+`;
 
 const NewVideoFormGroup = styled.div`
   display: flex;
@@ -105,7 +105,23 @@ const NewVideoFormGroup = styled.div`
 `;
 
 export default function NewVideo() {
-  const { tags } = useVideosContext();
+  const { tags, addVideo } = useVideosContext();
+
+  const [title, setTitle] = useState('');
+  const [tagId, setTagId] = useState('');
+  const [url, setUrl] = useState('');
+  const [description, setDescription] = useState('');
+
+  function handleFormSubmit(e) {
+    e.preventDefault();
+
+    addVideo({
+      title,
+      url,
+      description,
+      tagId
+    });
+  }
 
   return(
     <NewVideoContainer>
@@ -116,7 +132,7 @@ export default function NewVideo() {
         </p>
       </NewVideoTitle>
 
-      <NewVideoForm>
+      <NewVideoForm onSubmit={e => handleFormSubmit(e)}>
         <h3>Adicionar Vídeo</h3>
 
         <NewVideoFormGroup>
@@ -126,12 +142,19 @@ export default function NewVideo() {
             id="title"
             name="title"
             placeholder="Insira o título"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
           />
         </NewVideoFormGroup>
 
         <NewVideoFormGroup>
           <label htmlFor="tagId">Categoria</label>
-          <select id="tagId" name="tagId" defaultValue={""}>
+          <select 
+            id="tagId" 
+            name="tagId"
+            value={tagId}
+            onChange={e => setTagId(e.target.value)}
+          >
             <option value="" disabled></option>
             {tags.map(tag => (
               <option key={tag.id} value={tag.id}>{tag.name}</option>
@@ -146,6 +169,8 @@ export default function NewVideo() {
             id="url"
             name="url"
             placeholder="Insira o link do YouTube"
+            value={url}
+            onChange={e => setUrl(e.target.value)}
           />
         </NewVideoFormGroup>
         
@@ -156,6 +181,8 @@ export default function NewVideo() {
             name="description"
             rows={5}
             placeholder="Sobre o que é esse vídeo?"
+            value={description}
+            onChange={e => setDescription(e.target.value)}
           ></textarea>
         </NewVideoFormGroup>
 
