@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import styled from "styled-components";
+import { VideosProvider } from "../../contexts/VideosContext";
 
 const BodyContainer = styled.div`
   height: 100vh;
@@ -20,7 +21,9 @@ export default function PageContent() {
       <Header/>
 
       <MainContainer>
-        <Outlet/>
+        <VideosProvider>
+          <Outlet/>
+        </VideosProvider>
       </MainContainer>
 
       <Footer/>

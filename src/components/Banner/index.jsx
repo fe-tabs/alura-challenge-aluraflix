@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TagName from "../Tag/TagName";
+import { useVideosContext } from "../../contexts/VideosContext";
 
 const BannerContainer = styled.div`
   height: 60rem;
@@ -113,21 +114,25 @@ const BannerVideoDescription = styled.div`
   }
 `;
 
-export default function Banner({ video, tag }) {
-  const { title, url, description } = video;
+export default function Banner() {
+  const { tags, videos } = useVideosContext();
+
+  const video = videos[0];
+  const tag = tags.find(tag => tag.id === video.tagId);
 
   return(
     <BannerContainer>
       <div className="overlay"></div>
-      <iframe src={url} title={title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      <iframe src={video.url} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
       <BannerVideoCard $color={tag.color}>
         <BannerVideoDescription>
           <TagName backgroundColor={tag.color}>{tag.name}</TagName>
-          <h4>{title}</h4>
-          <p>{description}</p>
+          <h4>{video.title}</h4>
+          <p>{video.description}</p>
         </BannerVideoDescription>
-          <iframe src={url} title={title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        
+          <iframe src={video.url} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </BannerVideoCard>
     </BannerContainer>
   );

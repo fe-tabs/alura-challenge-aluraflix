@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useVideosContext } from "../../contexts/VideosContext";
 
 const NewVideoContainer = styled.section`
   padding: 4rem 6rem;
@@ -84,7 +84,7 @@ const NewVideoFormGroup = styled.div`
   }
 
   textarea {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
 
   input[type="submit"],
@@ -105,13 +105,7 @@ const NewVideoFormGroup = styled.div`
 `;
 
 export default function NewVideo() {
-  const [tags, setTags] = useState([]);
-
-  useEffect(() => {
-    fetch('http://localhost:3000/tags')
-      .then(res => res.json())
-      .then(data => setTags(data));
-  }, []);
+  const { tags } = useVideosContext();
 
   return(
     <NewVideoContainer>
