@@ -51,7 +51,13 @@ export function useVideosContext() {
     });
   }
 
-  async function editVideo(video) {}
+  async function editVideo(video) {
+    await fetch(`http://localhost:3000/videos/${video.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(video)
+    });
+  }
 
   function selectVideo(video) {
     setSelectedVideo(video);
