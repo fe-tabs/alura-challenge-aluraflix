@@ -6,6 +6,7 @@ VideosContext.displayName = "Videos";
 export function VideosProvider({ children }) {
   const [tags, setTags] = useState([]);
   const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState();
 
   return(
     <VideosContext.Provider
@@ -13,7 +14,9 @@ export function VideosProvider({ children }) {
         tags,
         setTags,
         videos,
-        setVideos
+        setVideos,
+        selectedVideo,
+        setSelectedVideo
       }}
     >
       {children}
@@ -26,7 +29,9 @@ export function useVideosContext() {
     tags,
     setTags,
     videos,
-    setVideos
+    setVideos,
+    selectedVideo,
+    setSelectedVideo
   } = useContext(VideosContext);
 
   useEffect(() => {
@@ -46,9 +51,18 @@ export function useVideosContext() {
     });
   }
 
+  async function editVideo(video) {}
+
+  function selectVideo(video) {
+    setSelectedVideo(video);
+  }
+
   return {
     tags,
     videos,
-    addVideo
+    selectedVideo,
+    addVideo,
+    selectVideo,
+    editVideo
   }
 }

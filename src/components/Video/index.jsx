@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useVideosContext } from "../../contexts/VideosContext";
 
 const VideoContainer = styled.div`
   background-color: var(--black);
@@ -41,21 +42,29 @@ const VideoFooter = styled.div`
   }
 `;
 
-export default function Video({ url, title, color}) {
+export default function Video({ video, color }) {
+  const { selectVideo } = useVideosContext();
+
   return(
     <VideoContainer $color={color}>
       <VideoPlayer $color={color}>
-        <iframe src={url} title={title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe src={video.url} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </VideoPlayer>
 
       <VideoFooter $color={color}>
         <button>
-          <img src="/icons/remove.png"/>
+          <img 
+            src="/icons/remove.png"
+            alt="Remover"
+          />
           <span>DELETAR</span>
         </button>
 
-        <button>
-          <img src="/icons/edit.png"/>
+        <button onClick={() => selectVideo(video)}>
+          <img 
+            src="/icons/edit.png"
+            alt="Editar"
+          />
           <span>EDITAR</span>
         </button>
       </VideoFooter>

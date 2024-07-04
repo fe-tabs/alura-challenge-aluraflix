@@ -3,13 +3,14 @@ import Video from "../../components/Video";
 import styled from "styled-components";
 import Banner from "../../components/Banner";
 import { useVideosContext } from "../../contexts/VideosContext";
+import Modal from "../../components/Modal";
 
 const HomeContainer = styled.section`
   padding: 2rem 4rem;
 `;
 
 export default function Home() {
-  const { tags, videos } = useVideosContext();
+  const { tags, videos, selectedVideo } = useVideosContext();
 
   return(
     <>
@@ -25,14 +26,15 @@ export default function Home() {
             {videos.filter(video => video.tagId === tag.id).map(video => (
               <Video
                 key={video.id}
-                title={video.title}
-                url={video.url}
+                video={video}
                 color={tag.color}
               />
             ))}
           </Tag>
         ))}
       </HomeContainer>
+
+      {selectedVideo && <Modal selectedVideo={selectedVideo}/>}
     </>
   );
 }
