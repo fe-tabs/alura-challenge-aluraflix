@@ -59,6 +59,12 @@ export function useVideosContext() {
     });
   }
 
+  async function deleteVideo(video) {
+    await fetch(`http://localhost:3000/videos/${video.id}`, {
+      method: "DELETE"
+    });
+  }
+
   function selectVideo(video) {
     setSelectedVideo(video);
   }
@@ -69,6 +75,7 @@ export function useVideosContext() {
     selectedVideo,
     addVideo,
     selectVideo,
-    editVideo
+    editVideo,
+    deleteVideo
   }
 }

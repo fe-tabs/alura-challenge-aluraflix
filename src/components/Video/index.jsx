@@ -43,7 +43,7 @@ const VideoFooter = styled.div`
 `;
 
 export default function Video({ video, color }) {
-  const { selectVideo } = useVideosContext();
+  const { selectVideo, deleteVideo } = useVideosContext();
 
   return(
     <VideoContainer $color={color}>
@@ -52,7 +52,7 @@ export default function Video({ video, color }) {
       </VideoPlayer>
 
       <VideoFooter $color={color}>
-        <button>
+        <button onClick={() => deleteVideo(video)}>
           <img 
             src="/icons/remove.png"
             alt="Remover"
