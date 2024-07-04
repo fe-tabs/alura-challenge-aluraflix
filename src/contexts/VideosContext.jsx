@@ -49,6 +49,8 @@ export function useVideosContext() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(video)
     });
+
+    setVideos([...videos, video]);
   }
 
   async function editVideo(video) {
@@ -57,12 +59,16 @@ export function useVideosContext() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(video)
     });
+
+    setVideos([...videos, video]);
   }
 
   async function deleteVideo(video) {
     await fetch(`http://localhost:3000/videos/${video.id}`, {
       method: "DELETE"
     });
+
+    setVideos(videos.filter(item => item.id !== video.id))
   }
 
   function selectVideo(video) {

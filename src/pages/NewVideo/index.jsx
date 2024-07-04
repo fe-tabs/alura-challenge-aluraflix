@@ -121,6 +121,11 @@ export default function NewVideo() {
       description,
       tagId
     });
+
+    setTitle('');
+    setTagId('');
+    setUrl('');
+    setDescription('');
   }
 
   return(
